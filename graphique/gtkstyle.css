@@ -1,0 +1,29 @@
+GtkWindow, GtkTextView{
+    background-color: #ffae00
+}
+
+GtkButton {
+      background-color: white;
+      border-radius: 3px;
+      border-style: solid;
+      border-width: 1px;
+      font-weight: bold;
+      padding: 7px 0px 7px 0px; 
+}
+
+GtkButton:hover {
+      transition: 300ms ease-in-out;
+      background-color: orange;  
+}
+
+GtkButton:active {
+    background-color: #0274d9;
+}
+
+GtkDrawingArea {
+    background-color: grey;
+}
+
+GtkContainer {
+    font-weight: bold;
+}

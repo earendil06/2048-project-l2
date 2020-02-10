@@ -1,0 +1,65 @@
+﻿\documentclass[11pt]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc} 
+
+
+\title{Introduction au langage C\\Projet 2048}
+
+\author{PASTOR Florent}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Ce projet a été réalisé au cours de l'UE Introduction au langage C. Il a pour but de recréer le jeu 2048 et est présent sous deux versions : une version console et une version graphique.
+
+\section{Structure des données}
+J'ai choisi de représenter une partie de jeu comme une structure contenant :
+\begin{itemize}
+	\item une matrice 4x4 d'entiers pour chaque case de la grille,
+	\item un entier représentant le score,
+	\item un booléen pour continuer ou non une partie gagnante.
+\end{itemize}
+
+\section{Compilation}
+
+\subsection{Version console}
+
+La version console de ce projet peut être compilée sous plusieurs OS.
+
+\subsubsection{Linux (32/64bits)}
+Sous linux, par cette simple ligne de commandes (dans le répertoire courant) :
+\begin{verbatim}
+gcc -Wall -ansi -pedantic 2048.c -o executable.out
+\end{verbatim}
+
+\subsubsection{Windows 8}
+
+
+
+\subsection{Version graphique}
+
+La version graphique de ce projet ne peut être compilée que sous un environnement Unix. Elle nécessite la librairie externe Gtk+ 3.x. disponible par cette ligne de commandes :
+\begin{verbatim}
+sudo apt-get install libgtk-3-dev
+\end{verbatim}
+
+Dans le répertoire du fichier à compiler, il suffit de taper cette ligne de commandes :
+\begin{verbatim}
+gcc `pkg-config --cflags --libs gtk+-3.0` -Wall -ansi 
+-pedantic 2048.c -o executable.out
+\end{verbatim}
+
+\end{document}
+
+
+
+
+
+
+
+mingw32-gcc.exe   -c "C:\Users\Florent\Desktop\Projet 2048\console\2048.c" -o "C:\Users\Florent\Desktop\Projet 2048\console\2048.o"
+mingw32-g++.exe  -o "C:\Users\Florent\Desktop\Projet 2048\console\2048.exe" "C:\Users\Florent\Desktop\Projet 2048\console\2048.o"
